@@ -41,8 +41,8 @@ public class DataBaseUtils {
 		String generalURL = null;
 		Class.forName("com.mysql.jdbc.Driver");
 		System.out.print("Connecting to Runnstein MySQL database...");
-        if (ConfigData.dbName == null) generalURL = "jdbc:mysql://"+ConfigData.dbURL+":"+ConfigData.dbPort;
-        else generalURL = "jdbc:mysql://"+ConfigData.dbURL+":"+ConfigData.dbPort+"/"+ConfigData.dbName;
+        if (ConfigData.dbName == null) generalURL = "jdbc:mysql://"+ConfigData.serverIP+":"+ConfigData.dbPort;
+        else generalURL = "jdbc:mysql://"+ConfigData.serverIP+":"+ConfigData.dbPort+"/"+ConfigData.dbName;
         con = DriverManager.getConnection(generalURL, ConfigData.dbUser, ConfigData.dbPassword);
         System.out.println(" Connected!");
 	}
